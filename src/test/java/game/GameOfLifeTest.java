@@ -13,8 +13,6 @@ import static org.junit.Assert.assertThat;
 
 public class GameOfLifeTest {
 
-
-
     @Test
     public void shouldInitialiseBoard()
     {
