@@ -23,7 +23,7 @@ public class Cell {
 
     @Override
     public int hashCode() {
-        return 100000 * x + y;
+        return x + y;
     }
 
     public Cell forOffset(int i, int j) {

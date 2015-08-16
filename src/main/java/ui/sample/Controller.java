@@ -18,6 +18,7 @@ import java.util.*;
 public class Controller implements Initializable {
 
     public static final int SIZE = 20;
+
     @FXML
     public Group group;
 
