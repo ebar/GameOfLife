@@ -1,8 +1,5 @@
 package game;
 
-/**
- * Created by Emily on 15/12/13.
- */
 public class Cell {
     private final int x;
     private final int y;

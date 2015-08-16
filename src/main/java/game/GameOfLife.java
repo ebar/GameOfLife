@@ -3,9 +3,6 @@ package game;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by Emily on 11/12/13.
- */
 public class GameOfLife {
 
     private Set<Cell> cells = new HashSet<Cell>();
@@ -26,7 +23,8 @@ public class GameOfLife {
                 for (int i = -1; i<2;i++){
                     for (int j=-1;j<2;j++){
                         Cell neighbouringCell = cell.forOffset(i, j);
-                        if (getCellState(neighbouringCell).equals(CellState.DEAD) && getNumberOfNeighbours(neighbouringCell) == 3)
+                        if (getCellState(neighbouringCell).equals(CellState.DEAD)
+                                && getNumberOfNeighbours(neighbouringCell) == 3)
                         {
                             cellsToAdd.add(neighbouringCell);
                         }
