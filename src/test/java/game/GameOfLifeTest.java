@@ -1,8 +1,5 @@
 package game;
 
-import game.Cell;
-import game.CellState;
-import game.GameOfLife;
 import org.junit.Test;
 
 import java.util.HashSet;
@@ -54,8 +51,6 @@ public class GameOfLifeTest {
 
         assertThat(gameOfLife.getCellState(new Cell(0, 0)), is(CellState.ALIVE));
         assertThat(gameOfLife.getCellState(new Cell(0, 1)), is(CellState.ALIVE));
-
-
     }
 
     @Test
@@ -71,9 +66,6 @@ public class GameOfLifeTest {
         gameOfLife.nextGeneration();
 
         assertThat(gameOfLife.getCellState(new Cell(0, 0)), is(CellState.DEAD));
-
-
-
     }
 
     @Test
@@ -200,7 +192,6 @@ public class GameOfLifeTest {
     public void deadCellShouldBecomeAliveWhenSurroundedByThreeLiveCells()
     {
         Set<Cell> cells = createCells();
-
         cells.add(new Cell(0,0));
         cells.add(new Cell(1,0));
         cells.add(new Cell(2,0));
@@ -212,8 +203,5 @@ public class GameOfLifeTest {
         assertThat(gameOfLife.getCellState(new Cell(1, 1)), is(CellState.ALIVE));
 
     }
-
-
-
 
 }

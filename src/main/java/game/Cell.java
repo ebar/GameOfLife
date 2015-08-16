@@ -1,6 +1,7 @@
 package game;
 
 public class Cell {
+
     private final int x;
     private final int y;
 
@@ -9,22 +10,11 @@ public class Cell {
         this.y = y;
     }
 
-    public CellState coordinatesEqual(int x, int y) {
-        if (this.x == x && this.y == y)
-        {
-            return CellState.ALIVE;
-        }
-        return CellState.DEAD;
-    }
-
     @Override
-    public boolean equals(Object another)
-    {
-        if (another instanceof Cell)
-        {
+    public boolean equals(Object another) {
+        if (another instanceof Cell) {
             Cell anotherCell = (Cell) another;
-            if (this.x == anotherCell.x && this.y == anotherCell.y)
-            {
+            if (this.x == anotherCell.x && this.y == anotherCell.y) {
                 return true;
             }
         }
@@ -32,13 +22,16 @@ public class Cell {
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         return 100000 * x + y;
     }
 
     public Cell forOffset(int i, int j) {
-
         return new Cell(x + i, y+j);
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + "," + y + ")";
     }
 }
