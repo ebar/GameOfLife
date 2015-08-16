@@ -52,6 +52,14 @@ public class GameOfLife {
         return CellState.DEAD;
     }
 
+    public void toggle(Cell cell) {
+        if (cells.contains(cell)) {
+            cells.remove(cell);
+        } else {
+            cells.add(cell);
+        }
+    }
+
     public Set<Cell> getCells() {
         return cells;
     }

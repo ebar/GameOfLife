@@ -22,7 +22,7 @@ public class Main {
                 yCoord++;
             }
             GameOfLife game = new GameOfLife(cells);
-            for (int i=0;i<4;i++) {
+            for (int i=0;i<10;i++) {
                 printCells(game.getCells());
                 game.nextGeneration();
 
@@ -38,8 +38,9 @@ public class Main {
     }
 
     private static void printCells(Set<Cell> cells) {
-        for (int i=0; i< 5; i++) {
-            for (int j =0;j<5;j++) {
+        System.out.println("\n---NEXT GENERATION---\n");
+        for (int i=0; i< 10; i++) {
+            for (int j =0;j<10;j++) {
                 if (cells.contains(new Cell(i,j))) {
                     System.out.print("x");
                 } else {

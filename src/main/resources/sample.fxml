@@ -1,0 +1,13 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.Group?>
+<GridPane fx:controller="ui.sample.Controller"
+          stylesheets="sample.css"
+          fx:id="grid"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Button text="Next" onAction=
+                    "#nextMove"/>
+    <Group GridPane.rowIndex=
+                   "2" fx:id="group"/>
+</GridPane>
+
