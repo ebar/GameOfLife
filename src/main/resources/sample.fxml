@@ -5,9 +5,8 @@
           stylesheets="sample.css"
           fx:id="grid"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <Button text="Next" onAction=
-                    "#nextMove"/>
-    <Group GridPane.rowIndex=
-                   "2" fx:id="group"/>
+    <Button GridPane.rowIndex="1" text="Start" onAction="#startGame"/>
+    <Button GridPane.rowIndex="2" text="Stop" onAction= "#stopGame"/>
+    <Group GridPane.rowIndex="3" fx:id="group"/>
 </GridPane>
 

@@ -16,7 +16,7 @@ public class GameOfLife {
         for (Cell cell : cells) {
             if (getNumberOfNeighbours(cell) == 2 || getNumberOfNeighbours(cell) == 3) {
                 cellsToAdd.add(cell);
-                for (int i = -1; i<2;i++) {
+                for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
                         Cell neighbouringCell = cell.forOffset(i, j);
                         if (getCellState(neighbouringCell).equals(CellState.DEAD)

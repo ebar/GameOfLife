@@ -27,7 +27,7 @@ public class Cell {
     }
 
     public Cell forOffset(int i, int j) {
-        return new Cell(x + i, y+j);
+        return new Cell(x + i, y + j);
     }
 
     @Override
